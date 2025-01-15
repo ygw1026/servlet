@@ -15,4 +15,15 @@
         <url-pattern>/beautify</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>multipleChoices</servlet-name>
+        <servlet-class>com.nhnacademy.study.MultipleChoices</servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>multipleChoices</servlet-name>
+        <url-pattern>/multiple</url-pattern>
+    </servlet-mapping>
+
 </web-app>
