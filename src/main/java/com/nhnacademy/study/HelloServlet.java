@@ -3,11 +3,14 @@ package com.nhnacademy.study;
 import java.io.*;
 import java.util.Objects;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import lombok.extern.slf4j.Slf4j;
 
-public class HelloServlet extends HttpServlet {
+@Slf4j
+public class HelloServlet extends HttpServlet{
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -44,6 +47,21 @@ public class HelloServlet extends HttpServlet {
         super.doPost(req, resp);
     }
 
+    @Override
+    public void init(ServletConfig config) throws ServletException{
+        log.info("before init!");
+        super.init(config);
+    }
+
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        log.info("before service!");
+        super.service(req, resp);
+    }
+
+    @Override
     public void destroy() {
+        log.info("before destroy!");
+        super.destroy();
     }
 }

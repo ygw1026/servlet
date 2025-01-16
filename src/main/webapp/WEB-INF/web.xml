@@ -15,7 +15,7 @@
             <param-name>name</param-name>
             <param-value>marco</param-value>
         </init-param>
-        <load-on-startup>1</load-on-startup>
+<!--        <load-on-startup>1</load-on-startup>-->
     </servlet>
 
     <servlet-mapping>
@@ -43,6 +43,20 @@
     <servlet-mapping>
         <servlet-name>multipleServlet</servlet-name>
         <url-pattern>/multiple</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>counterServlet</servlet-name>
+        <servlet-class>com.nhnacademy.study.CounterServlet</servlet-class>
+        <init-param>
+            <param-name>counter</param-name>
+            <param-value>100</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>counterServlet</servlet-name>
+        <url-pattern>/counter</url-pattern>
     </servlet-mapping>
 
 </web-app>
