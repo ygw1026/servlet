@@ -5,9 +5,28 @@
          version="5.0">
 
     <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.nhnacademy.study.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>title</param-name>
+            <param-value>Mr.</param-value>
+        </init-param>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>marco</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>beautifyServlet</servlet-name>
         <servlet-class>com.nhnacademy.study.BeautifyServlet</servlet-class>
-        <load-on-startup>3</load-on-startup>
+        <load-on-startup>2</load-on-startup>
     </servlet>
 
     <servlet-mapping>
@@ -16,13 +35,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>multipleChoices</servlet-name>
-        <servlet-class>com.nhnacademy.study.MultipleChoices</servlet-class>
+        <servlet-name>multipleServlet</servlet-name>
+        <servlet-class>com.nhnacademy.study.MultipleServlet</servlet-class>
         <load-on-startup>3</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>multipleChoices</servlet-name>
+        <servlet-name>multipleServlet</servlet-name>
         <url-pattern>/multiple</url-pattern>
     </servlet-mapping>
 
