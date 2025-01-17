@@ -208,4 +208,13 @@
         <filter-name>loginCheckFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <servlet>
+        <servlet-name>fileUploadServlet</servlet-name>
+        <servlet-class>com.nhnacademy.study.file.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fileUploadServlet</servlet-name>
+        <url-pattern>/file/fileUpload</url-pattern>
+    </servlet-mapping>
 </web-app>
