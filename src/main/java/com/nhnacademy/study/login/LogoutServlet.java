@@ -1,5 +1,6 @@
-package com.nhnacademy.study;
+package com.nhnacademy.study.login;
 
+import com.nhnacademy.study.CookieUtils;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
